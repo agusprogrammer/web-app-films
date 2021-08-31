@@ -1,7 +1,7 @@
 export class MovieThumbnail {
-    title: string;
-    year: string;
-    imdbID: string;
-    type: string;
-    poster: string;
+    Title: string;
+    Year: string;
+    ImdbID: string;
+    Type: string;
+    Poster: string;
 }

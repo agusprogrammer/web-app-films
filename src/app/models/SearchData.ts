@@ -1,7 +1,7 @@
 import { MovieThumbnail } from './MovieThumbnail';
 
 export class SearchData {
-    search: MovieThumbnail[];
+    Search: MovieThumbnail[];
     totalResults: string;
-    response: string;
+    Response: string;
 }

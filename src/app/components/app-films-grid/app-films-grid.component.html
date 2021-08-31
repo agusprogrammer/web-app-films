@@ -1,0 +1,22 @@
+<div class="div_grid">
+
+  <div class="card" *ngFor="let movieThumbnail of arrayMovieThumnailsGrid">
+    <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}}>
+    
+    <div class="container_card">
+      <p>{{movieThumbnail.Title}}</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!--
+<div *ngIf="showButtonMoreResults === true">
+  <button class="button_more_results" (click)="nextResults()">More Results</button>
+</div>-->
+
+<!-- Da error ERROR RangeError: Maximum call stack size exceeded
+  a la hora de anidar componentes
+<app-app-films-grid [searchQueryString]="searchQueryStringNext" [arrayMovieThumnailsGrid]="arrayMovieThumnailsNextGrid" [contGrid]="contNext"></app-app-films-grid>
+-->
