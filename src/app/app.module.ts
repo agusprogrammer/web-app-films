@@ -4,24 +4,28 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppFilmsGridComponent } from './components/app-films-grid/app-films-grid.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { FilmsGridModule } from './components/films-grid/films-grid.module';
+import { MovieServService } from './service/movie-serv.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppFilmsGridComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    FilmsGridModule
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MovieServService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,33 @@
+<div class="div_grid">
+
+  <div class="card" *ngFor="let movieThumbnail of arrayMovieThumnailsGrid; let i = index">
+    <div *ngIf="i + 1 === arrayMovieThumnailsGrid.length" #theLastList>
+      <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}}>
+      <!-- (click)="viewDetailsFilm($event, movieThumbnail.ImdbID)" -->
+      <div class="container_card">
+        <p>{{movieThumbnail.Title}}</p>
+      </div>
+      
+    </div>
+
+    <div *ngIf="i + 1 != arrayMovieThumnailsGrid.length"><!-- [routerLink]="['/home/appfilms/filmdetails/',movieThumbnail.ImdbID]" -->
+      <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}}>
+      <!-- (click)="viewDetailsFilm($event,movieThumbnail.ImdbID)" -->
+      <div class="container_card">
+        <p>{{movieThumbnail.Title}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!--
+<div *ngIf="showButtonMoreResults === true">
+  <button class="button_more_results" (click)="nextResults()">More Results</button>
+</div>-->
+
+<!-- Da error ERROR RangeError: Maximum call stack size exceeded
+  a la hora de anidar componentes
+<app-app-films-grid [searchQueryString]="searchQueryStringNext" [arrayMovieThumnailsGrid]="arrayMovieThumnailsNextGrid" [contGrid]="contNext"></app-app-films-grid>
+-->
