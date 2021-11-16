@@ -1,7 +1,7 @@
 <div class="find_comp">
   <div class="toolbar">
   <form class="search_form" [formGroup]="formFindMovies" (submit)="onSubmit(formFindMovies.value, $event)">
-    <!-- <span class="title_app">App Film</span> -->
+
     
     <div class="input_group">
       <label for="movie_title_input">Movie:</label>
@@ -16,7 +16,7 @@
     <div class="input_group">
       <label for="type_input">Type:</label>
       <select id="type_input" class="input_text" formControlName="typeInput">
-        <option value="">Select</option><!-- usar place holder o label -->
+        <option value="">Select</option>
         <option value="series">Serie</option>
         <option value="movie">Movie</option>
         <option value="game">Game</option>
@@ -24,11 +24,6 @@
       <button type="submit" class="input_submit">Find</button>
     </div>
     
-
-    <!-- <input type="submit" value="Find" class="input_submit"> -->
-    <!--<div class="input_group">
-      
-    </div>-->
 
   </form>
 </div>

@@ -13,7 +13,6 @@ export class FindFilmsComponent implements OnInit {
   public formFindMovies: FormGroup;
 
   // variables for build the query
-
   private titleString: string;
   private yearString: string;
   private typeString: string;
@@ -38,8 +37,8 @@ export class FindFilmsComponent implements OnInit {
   }
 
   onSubmit(formValue: any, event) {
-    // obtain data from form and configure the query
 
+    // obtain data from form and configure the query
     this.titleString = formValue.movieTitleInput;
     if (this.titleString === null) {
       this.titleString = '';
@@ -72,7 +71,6 @@ export class FindFilmsComponent implements OnInit {
     this.queryString = this.titleString + this.yearString +  this.typeString;
 
     // this.searchFilms(this.currentPage);
-
     this.router.navigate(['home/appfilms/gridlist', this.queryString]);
   }
 

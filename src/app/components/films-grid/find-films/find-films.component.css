@@ -1,26 +1,15 @@
 .toolbar{
-    /* background: rgb(82, 0, 0); */
-    /* background-color: rgb(53, 53, 53); */
     background-color: rgb(82, 0, 0);
     padding: 5px 15px 5px 15px;
 }
 
-/*
-.title_app{
-    color: white;
-    margin-right: 50px;
-    font-size: 2em;
-}
-*/
 
 .input_text{
     margin-bottom: 15px;
     margin-top: 15px;
     margin-right: 5px;
     margin-left: 5px;
-    /* border: 2px solid rgb(82, 0, 0); */
     border: 2px solid #b10000;
-    /* border-radius: 5px; */
     height: 25px;
 }
 
@@ -45,37 +34,26 @@ label{
     text-decoration: none;
     outline: none;
     color: #fff;
-    /* background-color: #0067ee; */
     background-color: #ff0000;
     border: none;
     border-radius: 5px;
-    /* box-shadow: 0 9px #999; */
-    /* box-shadow: 0 6px #999; */
     box-shadow: 0 4px #b10000;
 }
 
 .input_submit:hover{
-    /* background-color: #0051bb; */
     background-color: #ff5555;
 }
 
 .input_submit:active{
     background-color: #ff0000;
-    /* box-shadow: 0 5px #666;
-    transform: translateY(4px); */
-    /* box-shadow: 0 3px #666; */
     box-shadow: 0 3px #b10000;
     transform: translateY(3px);
 }
 
 
 .div_img_app{
-    /* filter:brightness(0.2);
-	background-color: rgba(0,0,0,0.5); */
-	background-attachment: fixed; 
-	/* background-image: url("../assets/image/programming1.png"); */
+	background-attachment: fixed;
     background-image: url("/assets/public/img/ticket_1.jpg");
-	/* height: 500px; */
 	width: 100%;
     margin-top: 0px;
 	padding-top: 0px;
@@ -104,8 +82,6 @@ label{
 
 .div_app_films_titleapp h1{
     color: #000000;
-    /* background: #FFFFFF; */
-    /* text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c; */
     font-size: 4em;
 }
 
@@ -154,9 +130,6 @@ label{
         font-size: 1.25em !important;
     }
 }
-
-/* form */
-/* @media (max-width: 920px) {} */
 
 .input_group{
     display: inline-block;

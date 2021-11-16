@@ -27,5 +27,6 @@ export class MovieServService {
     return this.http.get('http://www.omdbapi.com/?' + searchQuery + this.keyOmdbApi);
   }
 
+
 }
 

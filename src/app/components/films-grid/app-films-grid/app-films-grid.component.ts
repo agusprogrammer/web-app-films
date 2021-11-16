@@ -112,14 +112,6 @@ export class AppFilmsGridComponent implements OnInit, AfterViewInit {
       if (this.dataNotFound === true) {
         this.resultsNotFound = true;
       }
-      /*
-      if (this.searchData.Response === 'False') {
-
-        if (this.resultsNotFound === true) {
-          this.resultsNotFound = true;
-        }
-      }
-      */
 
     });
 

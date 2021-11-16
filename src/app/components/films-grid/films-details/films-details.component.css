@@ -1,6 +1,5 @@
 .div_head{
     height: 100%;
-    /* width: 100%; */
     background-color: rgb(82, 0, 0);
     padding: 60px;
 }
@@ -21,45 +20,21 @@
     position: fixed;
     margin: 10px;
     display: block;
-    /* background-color: rgb(82, 0, 0); */
 }
 .detail_film{
-    /* background-color: rgb(136, 0, 0); */
     background-color: rgb(82, 0, 0);
     height: 100%;
 }
 
-/*
-.titulo_detail{
-    background-color: rgb(82, 0, 0);
-}
 
-.titulo_detail h2{
-    color: black;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 10px 4px 0px #000000;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-*/
 
 @media (max-width: 768px) {
     .div_box_round{
         margin-left: 10%;
         margin-right: 10%;
-        /* margin-top: 5%; */
         margin-bottom: 5%;
     }
-    /*
-    .div_box{
-        background-color: seagreen;
-    }
-    */
+    
 
     /* text */
     .databox h4, .rating_box h4{
@@ -79,14 +54,9 @@
     .div_box_round{
         margin-left: 15%;
         margin-right: 15%;
-        /* margin-top: 5%; */
         margin-bottom: 5%;
     }
-    /*
-    .div_box{
-        background-color: steelblue;
-    }
-    */
+    
 
     /* text */
     .databox h4, .rating_box h4{
@@ -106,14 +76,8 @@
     .div_box_round{
         margin-left: 20%;
         margin-right: 20%;
-        /* margin-top: 5%; */
         margin-bottom: 5%;
     }
-    /*
-    .div_box{
-        background-color: springgreen;
-    }
-    */
 
     /* text */
     .databox h4, .rating_box h4{
@@ -131,16 +95,10 @@
 
 @media (min-width: 1081px) {
     .div_box_round{
-        margin-left: 20%; /* 15% */
-        margin-right: 20%; /* 15% */
-        /* margin-top: 5%; */
+        margin-left: 20%; 
+        margin-right: 20%; 
         margin-bottom: 5%;
     }
-    /*
-    .div_box{
-        background-color: violet;
-    }
-    */
 
     .div_grid{
         height: 500px;
@@ -149,7 +107,6 @@
 
     .div_grid img{
         height: 500px !important;
-        /* width: 100% !important; */
     }
 
     .databox{
@@ -216,8 +173,6 @@
     border-radius: 10px;
     margin-left: 50px;
     margin-top: 20px;
-    /* margin-right: 10px;
-    padding: 5px;*/
     border: solid red 1px;
     background-color: rgb(224, 224, 224);
     box-shadow: inset 0px 0px 20px 1px gray;
@@ -267,27 +222,19 @@
     text-decoration: none;
     outline: none;
     color: #fff;
-    /* background-color: #0067ee; */
     background-color: #ff0000;
     border: none;
     border-radius: 5px;
-    /* box-shadow: 0 9px #999; */
-    /* box-shadow: 0 6px #999; */
     box-shadow: 0 4px #b10000;
 
 }
 
 .button_details:hover{
-    /* background-color: #0051bb; */
     background-color: #ff5555;
 }
 
 .button_details:active{
-    /* background-color: #01377e; */
     background-color: #ff0000;
-    /* box-shadow: 0 5px #666;
-    transform: translateY(4px); */
-    /*box-shadow: 0 3px #666;*/
     box-shadow: 0 3px #b10000;
     transform: translateY(3px);
 }
