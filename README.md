@@ -16,7 +16,7 @@ This project is an Angular project that shows movie data that come from [OMDB ap
 
 <p>This project is like a search engine of films, you can find films, games and series and search also by date.</p> 
 
-<img src="https://i.ibb.co/Tw0hmyt/Captura11.png" width="250">
+<img src="https://i.ibb.co/Tw0hmyt/Captura11.png" width="400">
 
 ## Installation
 
@@ -40,7 +40,7 @@ ng build --prod
 
 You can use that web application for obtain data about films, games and series, for use you only need write and select the type for watch the results and navigate with the buttons.
 
-|<img src="https://i.ibb.co/MsLNCTN/Captura2.png" width="200">|<img src="https://i.ibb.co/Q9jfJLV/Captura3.png" width="200">|<img src="https://i.ibb.co/3YrBD0K/Captura4.png" width="200">|<img src="https://i.ibb.co/kKKZb8X/Captura5.png" width="200">|
+|<img src="https://i.ibb.co/MsLNCTN/Captura2.png" width="200">|<img src="https://i.ibb.co/Q9jfJLV/Captura3.png" width="250">|<img src="https://i.ibb.co/3YrBD0K/Captura4.png" width="250">|<img src="https://i.ibb.co/kKKZb8X/Captura5.png" width="250">|
 
 ## License
 
