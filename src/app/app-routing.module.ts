@@ -6,30 +6,10 @@ import { AppFilmsGridComponent } from './components/films-grid/app-films-grid/ap
 import { FindFilmsComponent } from './components/films-grid/find-films/find-films.component';
 import { FilmsDetailsComponent } from './components/films-grid/films-details/films-details.component';
 
-/*
-const appRoutes: Routes = [
-{
-  path: '',   // blank route example: urlserver/
-  pathMatch: 'full',
-  redirectTo: 'home/appfilms'
-},
-{
-  path: '**', // other routes go to urlserver/home/appfilms
-  redirectTo: 'home/appfilms'
-},
-{
-  path: 'home/appfilms', component: FindFilmsComponent
-},
-{
-  path: 'home/appfilms/gridlist', component: AppFilmsGridComponent
-}];
-*/
-
 const appRoutes: Routes = [
   {path: 'home/appfilms', component: FindFilmsComponent},
   {path: 'home/appfilms/gridlist/:searchQuery', component: AppFilmsGridComponent},
-  {path: 'home/appfilms/filmdetails', component: FilmsDetailsComponent},
-  {path: 'home/appfilms/filmdetails/:searchQueryDetail', component: FilmsDetailsComponent},
+  {path: 'home/appfilms/gridlist/filmdetails/:imdbID/:searchQueryBack', component: FilmsDetailsComponent},
   {path: '**', redirectTo: 'home/appfilms'}
 ];
 

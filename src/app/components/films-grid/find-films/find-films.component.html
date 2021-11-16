@@ -1,24 +1,41 @@
-<div class="toolbar">
+<div class="find_comp">
+  <div class="toolbar">
   <form class="search_form" [formGroup]="formFindMovies" (submit)="onSubmit(formFindMovies.value, $event)">
-    <span class="title_app">App Film</span>
+    <!-- <span class="title_app">App Film</span> -->
     
-    <label for="movie_title_input">Movie:</label>
-    <input type="text" id="movie_title_input" class="input_text" formControlName="movieTitleInput">
+    <div class="input_group">
+      <label for="movie_title_input">Movie:</label>
+      <input type="text" id="movie_title_input" class="input_text" formControlName="movieTitleInput">
+    </div>
     
-    <label for="year_input">Year:</label>
-    <input type="number" min="1800" id="year_input" class="input_text" formControlName="yearInput">
+    <div class="input_group">
+      <label for="year_input">Year:</label>
+      <input type="number" min="1800" id="year_input" class="input_text" formControlName="yearInput">
+    </div>
     
-    <label for="type_input">Type:</label>
-    <select id="type_input" class="input_text" formControlName="typeInput">
-      <option value="">Select</option><!-- usar place holder o label -->
-      <option value="series">Serie</option>
-      <option value="movie">Movie</option>
-      <option value="game">Game</option>
-    </select>
+    <div class="input_group">
+      <label for="type_input">Type:</label>
+      <select id="type_input" class="input_text" formControlName="typeInput">
+        <option value="">Select</option><!-- usar place holder o label -->
+        <option value="series">Serie</option>
+        <option value="movie">Movie</option>
+        <option value="game">Game</option>
+      </select>
+      <button type="submit" class="input_submit">Find</button>
+    </div>
+    
 
     <!-- <input type="submit" value="Find" class="input_submit"> -->
-    <button type="submit" class="input_submit">Find</button>
+    <!--<div class="input_group">
+      
+    </div>-->
 
   </form>
-
 </div>
+<div class="div_img_app">
+  <div class="div_app_films_titleapp">
+    <h1>App films</h1>
+  </div>
+</div>
+</div>
+

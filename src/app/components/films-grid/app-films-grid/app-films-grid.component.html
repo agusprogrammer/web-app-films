@@ -1,33 +1,52 @@
-<div class="div_grid">
-
-  <div class="card" *ngFor="let movieThumbnail of arrayMovieThumnailsGrid; let i = index">
+<div class="div_fix">
+    <button class="button_back" (click)="backButton()">Back</button>
+</div>
+<div class="div_back_ground">
+  <div class="div_grid">
+  <div class="card" *ngFor="let movieThumbnail of arrayMovieThumnailsGrid; let i = index" [routerLink]="['/home/appfilms/gridlist/filmdetails/',movieThumbnail.imdbID,searchQueryString]">
     <div *ngIf="i + 1 === arrayMovieThumnailsGrid.length" #theLastList>
       <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}}>
-      <!-- (click)="viewDetailsFilm($event, movieThumbnail.ImdbID)" -->
       <div class="container_card">
         <p>{{movieThumbnail.Title}}</p>
+        <p>{{movieThumbnail.Year}} - {{movieThumbnail.Type}}</p>
       </div>
-      
     </div>
 
-    <div *ngIf="i + 1 != arrayMovieThumnailsGrid.length"><!-- [routerLink]="['/home/appfilms/filmdetails/',movieThumbnail.ImdbID]" -->
-      <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}}>
-      <!-- (click)="viewDetailsFilm($event,movieThumbnail.ImdbID)" -->
+    <div *ngIf="i + 1 != arrayMovieThumnailsGrid.length">
+      <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}} [routerLink]="['/home/appfilms/gridlist/filmdetails/',movieThumbnail.imdbID,searchQueryString]">
       <div class="container_card">
         <p>{{movieThumbnail.Title}}</p>
+        <p>{{movieThumbnail.Year}} - {{movieThumbnail.Type}}</p>
       </div>
     </div>
 
   </div>
+  </div>
+
+  <div class="div_back_ground" *ngIf="this.resultsNotFound === true">
+    
+    <div class="error_box_padding">
+      <div class="error_box">
+        <h2>Error</h2>
+        <p>{{this.searchDataAny.Error}}</p>
+        
+        <!--
+          <p>Try to connect later and check your internet conection.</p>
+          <p>Try to write a correct name of a film, game or series with correct date and type parameters</p>
+        -->
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- footer -->
+  <div class="div_footer" *ngIf="this.resultsNotFound === false"></div>
+
+  <div class="error_background_footer" *ngIf="this.resultsNotFound === true"></div>
 
 </div>
 
-<!--
-<div *ngIf="showButtonMoreResults === true">
-  <button class="button_more_results" (click)="nextResults()">More Results</button>
-</div>-->
 
-<!-- Da error ERROR RangeError: Maximum call stack size exceeded
-  a la hora de anidar componentes
-<app-app-films-grid [searchQueryString]="searchQueryStringNext" [arrayMovieThumnailsGrid]="arrayMovieThumnailsNextGrid" [contGrid]="contNext"></app-app-films-grid>
--->
+
+
+

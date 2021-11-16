@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MovieServService } from 'src/app/service/movie-serv.service';
 import { FilmsDetailsComponent } from './films-details/films-details.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FilmsDetailsComponent } from './films-details/films-details.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    InfiniteScrollModule
   ],
   exports: [
     AppFilmsGridComponent,

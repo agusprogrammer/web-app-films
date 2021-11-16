@@ -1,3 +1,88 @@
-<p>
-  films-details works!
-</p>
+<div class="div_fix">
+  <button class="button_details" (click)="backButton()">Back</button>
+</div>
+<div class="div_head" *ngIf="this.resultsNotFound === false">
+  <h2>Details</h2>
+</div>
+<!--<div class="titulo_detail">
+  <h2>Details</h2>
+</div>-->
+<div class="detail_film">
+
+  <div class="div_box_round" *ngIf="this.resultsNotFound === false">
+    <div class="div_box" *ngFor="let movie of arrayMovie">
+      <div class="div_grid">
+        <img src={{movie.Poster}} alt="image film">
+        <div class="databox">
+          <h4>{{movie.Title}}</h4>
+            <ul>
+              <li><b>Year:</b> {{movie.Year}}</li>
+              <li><b>Type:</b> {{movie.Type}}</li>
+              <li><b>Rated:</b> {{movie.Rated}}</li>
+              <li><b>Released:</b> {{movie.Released}}</li>
+              <li *ngIf="this.movie.Type === 'series' || this.movie.Type === 'movie'"><b>Runtime:</b> {{movie.Runtime}}</li>
+              <li><b>Genre:</b> {{movie.Genre}}</li>
+              <li><b>Country:</b> {{movie.Country}}</li>
+            </ul>
+            <div class="rating_list">
+              <p>{{movie.imdbRating}}</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="description_box">
+        <p><b>Director:</b> {{movie.Director}}</p>
+        <p><b>Writer:</b> {{movie.Writer}}</p>
+        <p><b>Production:</b> {{movie.Production}}</p>
+        <p><b>Actors:</b> {{movie.Actors}}</p>
+        <p class="description_box_center"><b>Plot:</b></p>
+        <p>{{movie.Plot}}</p>
+
+          <div *ngIf="this.showMoreData === true">
+            <p><b>Awards:</b> {{movie.Awards}}</p>
+            
+            <div class="rating_box">
+              <h4><b>Ratings</b></h4>
+              <p><b>Internet ratings:</b></p>
+              <div *ngFor="let rating of movie.Ratings">
+                <ul>
+                  <li>{{rating.Source}}</li>
+                  <li>{{rating.Value}}</li>
+                </ul>
+              </div>
+              
+              <p><b>Imdb ratings:</b></p>
+              <ul>
+                <li>imdbRating: {{movie.imdbRating}}</li>
+                <li>imdbVotes: {{movie.imdbVotes}}</li>
+                <li>Metascore: {{movie.Metascore}}</li>
+              </ul>
+
+            </div>
+
+            <p><b>Other data:</b></p>
+            <p *ngIf="this.movie.Type === 'movie'"><b>Dvd:</b> {{movie.DVD}}</p>
+            <p><b>Box Office:</b> {{movie.BoxOffice}}</p>
+            <p *ngIf="this.movie.Type === 'series'"><b>Total Seasons:</b> {{movie.totalSeasons}}</p>
+            <p><b>Website:</b> {{movie.Website}}</p>
+          </div>
+
+          <button class="button_details" (click)="showMore()">{{buttonStateString}}</button>
+
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="footer_div" *ngIf="this.resultsNotFound === false"></div>
+
+    <div class="error_box_padding" *ngIf="this.resultsNotFound === true">
+      <div class="error_box">
+        <h2>Error</h2>
+        <p>{{this.searchDataAny.Error}}</p>
+      </div>
+    </div>
+
+  <div class="error_background_footer" *ngIf="this.resultsNotFound === true"></div>
+    
+</div>

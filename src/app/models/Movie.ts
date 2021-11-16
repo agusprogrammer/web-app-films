@@ -5,7 +5,7 @@ export class Movie {
     Year: string;
     Rated: string;
     Released: string;
-    Runtime: string;
+    Runtime: string; // for movies and series
     Genre: string;
     Director: string;
     Writer: string;
@@ -17,13 +17,14 @@ export class Movie {
     Poster: string;
     Ratings: Rating[];
     Metascore: string;
-    ImdbRating: string;
-    ImdbVotes: string;
-    ImdbID: string;
+    imdbRating: string;
+    imdbVotes: string;
+    imdbID: string;
     Type: string;
-    Dvd: string;
+    DVD: string; // for movies
     BoxOffice: string;
     Production: string;
     Website: string;
+    totalSeasons: string;
     Response: string;
 }

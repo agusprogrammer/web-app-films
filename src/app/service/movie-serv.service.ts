@@ -14,7 +14,7 @@ export class MovieServService {
   }
 
   public getMovieByID(movieID: string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?i=' + movieID + this.keyOmdbApi);
+    return this.http.get('http://www.omdbapi.com/?i=' + movieID + this.keyOmdbApi + '&plot=full');
   }
 
   // for 10 results

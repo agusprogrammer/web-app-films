@@ -26,32 +26,38 @@ export class AppFilmsGridComponent implements OnInit, AfterViewInit {
   // Variables for obtain the list of movies
   public arrayMovieThumnailsGrid: MovieThumbnail[] = [];
   public arrayMovieThumnailsResult: MovieThumbnail[] = [];
-  private searchDataAny: any;
+  public searchDataAny: any;
   private searchData: SearchData;
+  private noImgSrc: string;
+
+  public resultsNotFound: boolean;
+  private dataNotFound: boolean;
 
   constructor(private movieService: MovieServService, private routeActivate: ActivatedRoute, private router: Router) { }
-
-  ngAfterViewInit() {
-    this.theLastList.changes.subscribe((data) => {
-      // console.log(data);
-
-      if (data.last) {
-        this.observer.observe(data.last.nativeElement);
-      }
-
-    });
-  }
 
   ngOnInit() {
 
     // obtain the search query from url
     this.searchQueryString = this.routeActivate.snapshot.paramMap.get('searchQuery');
 
+    // initialize variables
     this.totalResults = 0;
     this.currentPage = 1;
+    this.noImgSrc = 'assets/public/img/no-imag.jpg';
+    this.resultsNotFound = false;
+    this.dataNotFound = true;
 
     this.searchFilms(this.currentPage);
     this.intersectionObserver();
+  }
+
+  ngAfterViewInit() {
+    this.theLastList.changes.subscribe((data) => {
+      if (data.last) {
+        this.observer.observe(data.last.nativeElement);
+      }
+
+    });
   }
 
   intersectionObserver() {
@@ -82,23 +88,46 @@ export class AppFilmsGridComponent implements OnInit, AfterViewInit {
 
     this.movieService.getMovieListForInifiniteScroll(this.searchQueryString + 'page=' + numberPage + '&').subscribe(data => {
       this.searchDataAny = data;
+
       this.searchData = this.searchDataAny;
 
-      this.arrayMovieThumnailsResult = this.searchData.Search;
+      if (this.searchData.Response === 'True') {
+        this.dataNotFound = false;
+        this.arrayMovieThumnailsResult = this.searchData.Search;
 
-      // tslint:disable-next-line:prefer-const
-      for (let movieThumbnail of this.arrayMovieThumnailsResult) {
-        this.arrayMovieThumnailsGrid.push(movieThumbnail);
+        // tslint:disable-next-line:prefer-const
+        for (let movieThumbnail of this.arrayMovieThumnailsResult) {
+
+          if ('' === movieThumbnail.Poster || 'N/A' === movieThumbnail.Poster || undefined === movieThumbnail.Poster) {
+            movieThumbnail.Poster = this.noImgSrc;
+          }
+
+          this.arrayMovieThumnailsGrid.push(movieThumbnail);
+        }
+
+        this.totalResultsString = this.searchData.totalResults;
+        this.totalResults = Number(this.totalResultsString);
       }
 
-      this.totalResultsString = this.searchData.totalResults;
-      this.totalResults = Number(this.totalResultsString);
+      if (this.dataNotFound === true) {
+        this.resultsNotFound = true;
+      }
+      /*
+      if (this.searchData.Response === 'False') {
+
+        if (this.resultsNotFound === true) {
+          this.resultsNotFound = true;
+        }
+      }
+      */
 
     });
+
   }
 
-  public viewDetailsFilm($event, idFilm: string) {
-    console.log(idFilm);
+  public backButton() {
+    this.router.navigate(['home/appfilms']);
   }
 
 }
+
