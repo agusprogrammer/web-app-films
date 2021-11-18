@@ -71,7 +71,7 @@ export class FindFilmsComponent implements OnInit {
     this.queryString = this.titleString + this.yearString +  this.typeString;
 
     // this.searchFilms(this.currentPage);
-    this.router.navigate(['home/appfilms/gridlist', this.queryString]);
+    this.router.navigate(['gridlist', this.queryString]);
   }
 
 }

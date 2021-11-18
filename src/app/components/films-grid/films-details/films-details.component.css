@@ -1,7 +1,10 @@
 .div_head{
     height: 100%;
     background-color: rgb(82, 0, 0);
-    padding: 60px;
+    padding-top: 80px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
 }
 
 .div_head h2{
@@ -185,6 +188,7 @@
 }
 
 .description_box{
+    margin-top: 50px;
     margin-left: 10px;
 }
 

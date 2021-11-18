@@ -3,7 +3,7 @@
 </div>
 <div class="div_back_ground">
   <div class="div_grid">
-  <div class="card" *ngFor="let movieThumbnail of arrayMovieThumnailsGrid; let i = index" [routerLink]="['/home/appfilms/gridlist/filmdetails/',movieThumbnail.imdbID,searchQueryString]">
+  <div class="card" *ngFor="let movieThumbnail of arrayMovieThumnailsGrid; let i = index" [routerLink]="['/gridlist/filmdetails/',movieThumbnail.imdbID,searchQueryString]">
     <div *ngIf="i + 1 === arrayMovieThumnailsGrid.length" #theLastList>
       <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}}>
       <div class="container_card">
@@ -13,7 +13,7 @@
     </div>
 
     <div *ngIf="i + 1 != arrayMovieThumnailsGrid.length">
-      <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}} [routerLink]="['/home/appfilms/gridlist/filmdetails/',movieThumbnail.imdbID,searchQueryString]">
+      <img src={{movieThumbnail.Poster}} alt={{movieThumbnail.Title}} [routerLink]="['/gridlist/filmdetails/',movieThumbnail.imdbID,searchQueryString]">
       <div class="container_card">
         <p>{{movieThumbnail.Title}}</p>
         <p>{{movieThumbnail.Year}} - {{movieThumbnail.Type}}</p>

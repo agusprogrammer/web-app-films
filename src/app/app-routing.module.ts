@@ -7,10 +7,10 @@ import { FindFilmsComponent } from './components/films-grid/find-films/find-film
 import { FilmsDetailsComponent } from './components/films-grid/films-details/films-details.component';
 
 const appRoutes: Routes = [
-  {path: 'home/appfilms', component: FindFilmsComponent},
-  {path: 'home/appfilms/gridlist/:searchQuery', component: AppFilmsGridComponent},
-  {path: 'home/appfilms/gridlist/filmdetails/:imdbID/:searchQueryBack', component: FilmsDetailsComponent},
-  {path: '**', redirectTo: 'home/appfilms'}
+  {path: '', component: FindFilmsComponent},
+  {path: 'gridlist/:searchQuery', component: AppFilmsGridComponent},
+  {path: 'gridlist/filmdetails/:imdbID/:searchQueryBack', component: FilmsDetailsComponent},
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({

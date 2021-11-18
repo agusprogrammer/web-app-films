@@ -70,7 +70,7 @@ label{
 }
 
 .div_app_films_titleapp{
-    position: absolute;
+    position: fixed;
     background: white;
     padding: 10px 60px;
     border-radius: 10px;

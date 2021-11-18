@@ -118,7 +118,7 @@ export class AppFilmsGridComponent implements OnInit, AfterViewInit {
   }
 
   public backButton() {
-    this.router.navigate(['home/appfilms']);
+    this.router.navigate(['/']);
   }
 
 }

@@ -66,7 +66,7 @@ export class FilmsDetailsComponent implements OnInit {
   }
 
   public backButton() {
-    this.router.navigate(['home/appfilms/gridlist/' + this.searchQueryStringBack]);
+    this.router.navigate(['gridlist/' + this.searchQueryStringBack]);
   }
 
 }
