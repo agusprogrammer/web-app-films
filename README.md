@@ -1,6 +1,6 @@
 # WebAppFilms
 
-Version: 0.1.0
+Version: 1.0.0
 
 An Angular movie database web application.
 
@@ -51,6 +51,11 @@ Pixaway image:
 * [Pixaway image](https://pixabay.com/es/photos/billete-cup%c3%b3n-admisi%c3%b3n-carnaval-2974645/)
 
 ## Changelog
+
+### Version 1.0.0
+
+* First producction release.
+* HTTPS bug fixed.
 
 ### Version 0.1.0
 

@@ -14,17 +14,17 @@ export class MovieServService {
   }
 
   public getMovieByID(movieID: string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?i=' + movieID + this.keyOmdbApi + '&plot=full');
+    return this.http.get('https://www.omdbapi.com/?i=' + movieID + this.keyOmdbApi + '&plot=full');
   }
 
   // for 10 results
   public getMovieList(searchQuery: string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?' + searchQuery + this.keyOmdbApi);
+    return this.http.get('https://www.omdbapi.com/?' + searchQuery + this.keyOmdbApi);
   }
 
   // for infinite scroll (usar el de arriba si se queda igual)
   public getMovieListForInifiniteScroll(searchQuery: string): Observable<any> {
-    return this.http.get('http://www.omdbapi.com/?' + searchQuery + this.keyOmdbApi);
+    return this.http.get('https://www.omdbapi.com/?' + searchQuery + this.keyOmdbApi);
   }
 
 
