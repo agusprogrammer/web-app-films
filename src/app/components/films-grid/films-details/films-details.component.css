@@ -153,7 +153,7 @@
     /* Grid layout */
     display: grid;
     gap: 0.5rem;
-    grid-auto-rows: 25rem;
+    grid-auto-rows: 30rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 2fr));
 }
 
@@ -176,6 +176,7 @@
     border-radius: 10px;
     margin-left: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
     border: solid red 1px;
     background-color: rgb(224, 224, 224);
     box-shadow: inset 0px 0px 20px 1px gray;
@@ -188,7 +189,7 @@
 }
 
 .description_box{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
